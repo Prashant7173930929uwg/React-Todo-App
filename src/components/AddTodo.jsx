@@ -12,9 +12,14 @@ function AddTodo(){
   let handleOnClick = ()=>{
      let inputTodoItem = todoNameElement.current.value ;
      let inputDate = todoDateElement.current.value ;
+     if(inputTodoItem=="" || inputDate==""){
+      alert("please Enter the date and Todo") ;
+     }
+     else{
      onNewItem(inputTodoItem, inputDate) ;
      todoNameElement.current.value = "" ;
      todoDateElement.current.value = "" ;
+     } 
   }
 
   return(
